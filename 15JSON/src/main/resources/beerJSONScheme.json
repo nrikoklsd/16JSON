@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "guns",
+  "description": "Gun list",
+  "type": "array",
+  "items":{
+    "type": "object",
+    "properties": {
+
+      "model": {
+        "description": "The unique identifier for a gun",
+        "type": "string",
+        "uniqueItems": true
+      },
+      "origin": {
+        "description": "Country of gun",
+        "type": "string",
+        "enum": ["ukraine","poland","usa"]
+      },
+      "handy": {
+        "description": "type of handys(1/2)",
+        "type": "integer",
+        "enum": [1,2]
+      },
+
+      "material": {
+        "description": "Material of gun",
+        "type": "string",
+        "enum": ["leather","metal","sheshosy"]
+      },
+
+      "TTC": {
+        "description": "characteristics of beer",
+        "type": "object",
+        "properties":{
+          "sightRange": {
+            "description": "sightRange",
+            "type": "number",
+            "minimum": 3,
+            "maximum": 10
+          },
+          "stockAvailability": {
+            "description": "stockAvailability",
+            "type": "string",
+            "enum": ["yes","no"]
+          },
+          "opticsAvailability": {
+            "description": "opticsAvailability",
+            "type": "string",
+            "enum": ["yes","no"]
+          },
+          "carry": {
+            "description": "carry",
+            "type": "string",
+            "enum": ["close","middle","far"]
+          }
+
+        }
+      }
+    },
+    "required":["model", "origin", "handy", "material"]
+  }
+}
+

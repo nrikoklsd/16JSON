@@ -1,0 +1,20 @@
+
+[
+
+  {
+    "model": "nazar",
+    "origin": "Ukraine",
+    "handy": 1,
+    "material": "sheshosy",
+    "TTC":{
+      "sightRange": 4,
+      "stockAvailability": "no",
+      "opticsAvailability": "yes",
+      "carry": "close"
+    }
+  }
+
+
+]
+
+
